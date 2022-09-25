@@ -77,10 +77,12 @@ catkin build
 ```
 
 ### 4) Download the PX4 Firmware package and build it
+* Before make, checkout to a branch of the px4 package that has been tested to work with the simulaton without any errors. Checkout using ID: `00f86e`.
 ```
 cd ~/fans_ws/src
 git clone https://github.com/PX4/PX4-Autopilot.git --recursive
 cd PX4-Autopilot
+git checkout 00f86e
 make px4_sitl_default gazebo 
 ```
 
@@ -163,7 +165,7 @@ alias fans_ws='source ~/fans_ws/devel/setup.bash'
 ### 1) Installation of standard/normal and cmake versions of NS3
 * Install the standard version of NS3 ; Install all the required dependencies from [this](https://www.nsnam.org/wiki/Installation#Ubuntu.2FDebian.2FMint) link, and then install NS3 from [this](https://www.nsnam.org/wiki/Installation#Installation) link in the following way: <br/>
 a) `Manual installation` -> `Downloading ns-3 Using Git` <br/>
-b) `Building ns-3 with build.py` <br/>
+b) `Building ns-3 with build.py` (The simulation can be run without building ns-3 using python, incase the build fails). <br/> 
 c) `Configuration with Waf` <br/>
 d) `Validating` <br/>
 

@@ -17,7 +17,7 @@ cp -r ~/FANS/mavad <path_to_ns3-all-in-one>/NS3/
 cp ~/FANS/sitl8drones.launch <path_to_fans_ws>/src/PX4-Autopilot/launch/
 cp ~/FANS/pci8drones.launch <path_to_fans_ws>/src/pci/launch/
 ```
-* Build your ROS workspace (fans_ws)
+* Build your ROS workspace `fans_ws` (Blacklist px4 before building using catkin config)
 ```bash
 cd <path_to_fans_ws>
 catkin build
